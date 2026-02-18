@@ -28,7 +28,7 @@ var topoMap = L.tileLayer("https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png", {
 
 // Custom Icon (opsional)
 var spbuIcon = L.icon({
-  iconUrl: './aset/icon-spbu.png', // opsional
+  iconUrl: 'aset/icon-spbu.png', // opsional
   iconSize: [32, 32],
   iconAnchor: [16, 32],
   popupAnchor: [0, -32]
