@@ -53,6 +53,16 @@ L.Control.geocoder({
 // === Scale Bar ===
 L.control.scale({ position: "bottomleft", imperial: false }).addTo(map);
 
+// === Geolocation ===
+map.locate({ setView: true, maxZoom: 14 });
+
+function onLocationFound(e) {
+  L.marker(e.latlng).addTo(map)
+    .bindPopup("Lokasi Anda").openPopup();
+}
+
+map.on('locationfound', onLocationFound);
+
 // Load data GeoJSON
 fetch('data/spbu_labusel1.geojson')
   .then(res => res.json())
